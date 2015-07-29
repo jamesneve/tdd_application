@@ -1,4 +1,4 @@
-This is your new Play application
+TDD example using Play 2.4.2
 =================================
 
-This file will be packaged with your application, when using `activator dist`.
+This is an example of an application created using test driven development (TDD) in Play 2.4.2
