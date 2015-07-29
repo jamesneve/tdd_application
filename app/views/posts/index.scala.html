@@ -1,0 +1,22 @@
+@(posts: List[Post], postForm: Form[Post])
+@import helper._
+
+@main("Posts") {
+	@for(post <- posts) {
+		<div class="post">
+			<h2>@post.title</h2>
+			<p>@post.content</p>
+		</div>
+	}
+
+	@helper.form(action = routes.Posts.add()) {
+		<fieldset>
+			<h3>Add a post</h3>
+			Title: <input type="text" name="title" /><br />
+			Content: <input type="text" name="content" />
+			<p>
+				<input name="submit" type="submit" class="btn" value="Submit" />
+			</p>
+		</fieldset>
+	}
+}
